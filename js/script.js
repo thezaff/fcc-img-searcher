@@ -39,8 +39,7 @@ xhr.onreadystatechange = function() {
     }
 }
 
-xhr.open('GET', 'missing.html');
-xhr.send();
-// $('h1').click(function() {
-//     xhr.send();
-// });
+xhr.open('GET', 'sidebar.html');
+$('h1').click(function() {
+    xhr.send();
+});
