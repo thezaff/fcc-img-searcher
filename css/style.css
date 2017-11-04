@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* set all margins and paddings to zero */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #231340;
+    color: white;
+    /* font-family: 'Oswald', sans-serif;
+    font-family: 'Bitter', serif;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;         
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Anton', sans-serif;*/
+    font-family: 'Roboto', sans-serif;       
+}
+
+p {
+    margin: 10px;
+}
+
+label {
+    margin-top: 15px;
+}
+
+button {
+    margin: 4px;
+}
+
+.newPet {
+    background-color: silver;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 56pt;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+#branding {
+    /* background-color: #DFDBE5; #150B28 */ 
+    /* background-color: #DFDBE5; */
+    font-family: 'Josefin Sans', sans-serif;        
+    margin: 0px;
+    padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 4 4'%3E%3Cpath linear-gradient='rgb(45deg, #91258B, #231340)' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    /* color: rgb(81, 224, 222); */
+    color: rgba(29, 255, 232, 0.849);
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+ }
+
+ .navbar-nav li {
+      float: none;
+      display: inline-block;
+  }
+/* make navbar items centered */   
+
+.navbar-custom {
+      
+    background: rgb(24, 4, 23);
+    border: none;
+    /* box-shadow: 1px 4px #000000;     */
+
+}
+/* custom navbar styling */
+.navbar-custom ul li a {
+    color: #e6fafb;
+}
+
+.navbar-custom ul li a:hover {
+    color: #96eceb;
+    background-color: inherit;
+}
+
+.navbar-custom ul li a:focus {
+    color: #62e3df;
+    background-color: inherit;
+}
+
+/* set all navbar list items styling to default */
+
+.post {
+    margin: 15px 0 25px 0;
+    padding: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 4 4'%3E%3Cpath linear-gradient='rgb(45deg, #91258B, #231340)' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    font-family: 'Roboto', sans-serif;    
+    
+}
+
+.post-aside {
+    margin: 15px 0 25px 0;
+    padding: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 4 4'%3E%3Cpath linear-gradient='rgb(45deg, #91258B, #231340)' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* https://mir-s3-cdn-cf.behance.net/project_modules/fs/ab118457692917.59df9c73cfe28.jpg
+https://www.behance.net/gallery/57692917/Foster-Friends
+ */
