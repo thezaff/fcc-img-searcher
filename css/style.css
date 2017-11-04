@@ -115,3 +115,20 @@ h1 {
 /* https://mir-s3-cdn-cf.behance.net/project_modules/fs/ab118457692917.59df9c73cfe28.jpg
 https://www.behance.net/gallery/57692917/Foster-Friends
  */
+
+ /* #workers {
+    background-color: #19102b;
+    border: 1px solid #277573;
+    border-radius: 5px;
+} */
+
+.list-group li {
+    color: #62e3df;
+    border-color: #62e3df;
+    background-color: rgba(98, 227, 223, 0.1);
+    /* background-color: rgba(106, 50, 211, 0.1); */
+}
+
+.list-group {
+    border-color: #277573;
+}

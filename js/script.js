@@ -1,26 +1,27 @@
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
     if(xhr.readyState === 4) {
-        console.log(typeof xhr.responseText);
+        var employees = JSON.parse(xhr.responseText);
+        var workerDiv = '<ul class="list-group">';
+        var batteryEmpty = '<i class="fa fa-battery-empty" aria-hidden="true"></i>';
+        var batteryFull = '<i class="fa fa-battery-full" aria-hidden="true"></i>';
+        for (var i = 0; i < employees.length; i++) {
+            if (employees[i].inoffice === false) {
+                workerDiv += '<li class="list-group-item">' + employees[i].name + ' ' + batteryEmpty + '</li>';
+            } else {
+                workerDiv += '<li class="list-group-item">' + employees[i].name + ' ' + batteryFull + '</li>';
+            }
+        }
+        workerDiv += '</ul>';
+        $('#workers').html(workerDiv);
+        console.log(workerDiv);
     }
 }
 
+
+
 xhr.open('GET', 'data.json');
 xhr.send();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
