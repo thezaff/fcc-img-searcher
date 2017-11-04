@@ -32,7 +32,10 @@
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
-        document.getElementById('ajax').innerHTML = xhr.responseText;
+        if (xhr.status === 200) {
+            document.getElementById('ajax').innerHTML = xhr.responseText;
+        } else {
+            alert(xhr.statusText);
     }
 };
 xhr.open('GET', 'sidebar.html');
