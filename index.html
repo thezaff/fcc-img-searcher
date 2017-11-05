@@ -34,16 +34,32 @@
             </nav>
         </div>
     </header>
+    
+    <div class="container">
+
+        <div class="container-fluid" id="flickrBoard">
+            <input id="flickrInput" type="text" class="form-control" placeholder="Type photo tag to search by...">
+            <button class="btn btn-success" id="searchBtn">Search</button>
+            <div id="imgBoard">
+
+            </div>
+        </div>
+
+
+        <h3 id="jajax">Room busyness</h3>
+        <button onclick="sendAJAX()" id="req" class="btn btn-success">Get request</button>
+    </div>
 
     <div id="workers" class="container">
 
     </div>
-
+    
     <div class="container">
         <h1>bring me ajax pls <i class="fa fa-battery-empty" aria-hidden="true"></i></h1>
         <div id="ajax">
         </div>
     </div>
+
 
     <div class="container" id="newPet">
         

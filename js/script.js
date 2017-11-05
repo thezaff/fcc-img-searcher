@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest();
+/* var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
     if(xhr.readyState === 4) {
         var employees = JSON.parse(xhr.responseText);
@@ -19,23 +19,89 @@ xhr.onreadystatechange = function () {
 }
 
 
-
 xhr.open('GET', 'data.json');
 xhr.send();
+ */
+/* 
+function sendAJAX() {
+    $.get('data.json', function(response) {
+        $('#jajax').HTML(response);
+    });
+    $('#req').hide();
+} */
 
+/* $(document).ready(function () {
+    var url = 'data.json'
+    $.getJSON(url, function (response) {
+        var tab = '<ul class="list-group">';
+        $.each(response, function(index, employee) {
+            if (employee.inoffice === true) {
+                tab += '<li class="list-group-item" id="in">';
+            } else {
+                tab += '<li class="list-group-item" id="out">';
+            }
+            tab += employee.name + '</li>';
+        })
+        tab += '</ul>';
+        $('#jajax').html(tab);
+    }).fail(function (jqXHR) {
+        alert(jqXHR.statusText + " Error on the page blya");
+    });
+});
+ */
 
+/* $(document).ready(function () {
+///////////////////// NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET NE RABOTAET ///// 
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne";
+    $('#searchBtn').click( function() {
+        var flickrInput = document.getElementById('flickrInput');
+        var tag = {
+            tags : flickrInput.value,
+            format : "json"
+        }
+        console.log(tag);
+        function jsonFlickrFeed(json) {
+            console.log(json);
+            var photoHTML = '';
+            $.each(json.items, function(i, photo) {
+                photoHTML += '<a class="col-xs-4" href="' + photo.link + '">';
+                photoHTML += '<img src="' + photo.media.m + '">';
+                photoHTML += '</a>';
+            });
+            $(photoHTML).appendTo('#imgBoard');
+        }
+        $.ajax({
+            url: "https://api.flickr.com/services/feeds/photos_public.gne",
+            dataType: "jsonp",
+            data: {
+                tags : "cats",
+                format : "json"
+            }
+        });
+    });
+}); */
+$("#searchBtn").on(("click" || "keypress"), handleButtonClick);
+var flickrInput = document.getElementById('flickrInput');
 
+function jsonFlickrFeed(json) {
+var photoHTML = '';
+  console.log(json);
+  $.each(json.items, function(i, item) {
+    photoHTML += '<a class="col-xs-4" href="' + item.link + '">';
+    photoHTML += '<img class="thumbnail" style="width, 100%" src="' + item.media.m + '">';
+    photoHTML += '</a>';
+  });
+  $("#imgBoard").html(photoHTML);
+  console.log("searching");
+};
 
-
-
-
-
-
-
-
-
-
-
+function handleButtonClick() {  
+  $.ajax({
+    url: 'https://api.flickr.com/services/feeds/photos_public.gne',
+    dataType: 'jsonp',
+    data: { "tags": flickrInput.value, "format": "json" }
+  });
+}
 /* var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
